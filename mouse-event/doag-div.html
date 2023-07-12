@@ -28,10 +28,13 @@
         let isclicked = false;
         let moveX, moveY;
         let endX = 0, endY = 0;
+
         div.addEventListener('mousedown', (e) =>{
             isclicked = true;
             clickX = e.clientX;
             clickY = e.clientY;
+            moveX = 0 ;
+            moveY = 0 ;
         })
 
         window.addEventListener('mousemove', (e) =>{
@@ -49,7 +52,10 @@
             endY = moveY + endY;
             console.log(endX, endY);
         })
-
+        window.addEventListener('mouseleave', ()=>{
+            isclicked = false;
+            div.style.transform = `translate(${endX}px,${endY})`;
+        })
         
     </script>
 </body>
