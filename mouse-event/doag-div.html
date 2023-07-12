@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .drag-able{
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="drag-able"></div>
+
+    <script>
+        const div = document.querySelector('.drag-able');
+        let clickX, clickY ;
+        let isclicked = false;
+        let moveX, moveY;
+        let endX = 0, endY = 0;
+        div.addEventListener('mousedown', (e) =>{
+            isclicked = true;
+            clickX = e.clientX;
+            clickY = e.clientY;
+        })
+
+        window.addEventListener('mousemove', (e) =>{
+            if(isclicked){
+                moveX = e.clientX - clickX;
+                moveY = e.clientY - clickY;
+
+                div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`;
+            }
+        })
+
+        div.addEventListener('mouseup', ()=>{
+            isclicked = false;
+            endX = moveX + endX;
+            endY = moveY + endY;
+            console.log(endX, endY);
+        })
+
+        
+    </script>
+</body>
+</html>
