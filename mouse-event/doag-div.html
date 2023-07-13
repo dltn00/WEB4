@@ -26,8 +26,8 @@
         const div = document.querySelector('.drag-able');
         let clickX, clickY ;
         let isclicked = false;
-        let moveX, moveY;
         let endX = 0, endY = 0;
+        let moveX =0, moveY = 0;
 
         div.addEventListener('mousedown', (e) =>{
             isclicked = true;
@@ -39,24 +39,33 @@
 
         window.addEventListener('mousemove', (e) =>{
             if(isclicked){
+                const top = e.clientY < 0;
+                const left = e.clientX < 0;
+                const bottom = e.clientY > window.innerHeight;
+                const right = e.clientX > window.innerWidth;
+
+                
+            if(top && left && bottom && right) {
+                isclicked = false;
                 moveX = e.clientX - clickX;
                 moveY = e.clientY - clickY;
-
                 div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`;
+                
+            } else {
+                isclicked = false
+                div.style.transform = `translate(${endX}px, ${endY})`;
+            }
             }
         })
 
         div.addEventListener('mouseup', ()=>{
-            isclicked = false;
-            endX = moveX + endX;
-            endY = moveY + endY;
-            console.log(endX, endY);
+            if(isclicked) {
+
+                    isclicked = false;
+                    endX = moveX + endX;
+                    endY = moveY + endY;
+            }
         })
-        window.addEventListener('mouseleave', ()=>{
-            isclicked = false;
-            div.style.transform = `translate(${endX}px,${endY})`;
-        })
-        
     </script>
 </body>
 </html>

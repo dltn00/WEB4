@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 5000px;
+            background-image: linear-gradient(#555,#aaa)
+        }
+        .content{
+            margin-top: 2000px;
+            color: white;
+            font-size: 32px;
+        }
+        .scroll-contents{
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: 1500ms;
+        }
+        .active{
+            opacity: 1;
+            translate: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content scroll-contents">나타났다</div>
+    <script>
+        const scrollContents = document.querySelector('.scroll-contents');
+
+        window.addEventListener('scroll',(e)=>{
+            console.log(scrollContents.getBoundingClientRect().top - window.innerHeight < 0)
+            if(scrollContents.getBoundingClientRect().top - window.innerHeight < 0){
+                scrollContents.classList.add('active');
+            }else{
+                scrollContents.classList.remove('active');
+            }
+        })
+    </script>
+    
+</body>
+</html>
