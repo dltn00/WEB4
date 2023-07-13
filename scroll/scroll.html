@@ -1,44 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             height: 5000px;
-            background-image: linear-gradient(#555,#aaa)
+            background-image: linear-gradient(#555, #AAA);
         }
-        .content{
-            margin-top: 2000px;
+
+        .content {
             color: white;
             font-size: 32px;
+            font-weight: bold;
+            margin-top: 300px;
         }
-        .scroll-contents{
+
+        .scroll-contents {
             opacity: 0;
             transform: translateX(-200px);
             transition: 1500ms;
         }
-        .active{
+
+        .scroll-contents.active {
             opacity: 1;
-            translate: none;
+            transform: none;
+        }
+
+        .this-is-girl {
+            margin-bottom: 500px;
         }
     </style>
 </head>
-<body>
-    <div class="content scroll-contents">나타났다</div>
-    <script>
-        const scrollContents = document.querySelector('.scroll-contents');
 
-        window.addEventListener('scroll',(e)=>{
-            console.log(scrollContents.getBoundingClientRect().top - window.innerHeight < 0)
-            if(scrollContents.getBoundingClientRect().top - window.innerHeight < 0){
-                scrollContents.classList.add('active');
-            }else{
-                scrollContents.classList.remove('active');
+<body>
+
+    <div class="text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, cumque quidem? Sapiente rem eum dicta incidunt
+        eligendi placeat odio minima debitis molestias sit. Nulla aut tempore quae sit sed officiis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui doloremque suscipit excepturi vero molestiae
+        possimus illo expedita omnis vel assumenda eveniet quidem molestias, velit dolores dolorum at accusamus
+        officiis.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora et, alias dolore molestiae nesciunt impedit,
+        voluptates pariatur id a ea excepturi dignissimos magnam assumenda soluta omnis perferendis praesentium fuga!
+        Cupiditate.
+
+    </div>
+
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <div class="content scroll-contents">
+        나타난다!
+    </div>
+    <img src="dom-hill-nimElTcTNyY-unsplash.jpg" class="this-is-girl" alt="">
+    <script>
+        const scrollContent = document.getElementsByClassName('scroll-contents');
+        const thisIsGirl = document.querySelector('.this-is-girl');
+
+        window.addEventListener('scroll', (e) => {
+
+            console.log(thisIsGirl.getBoundingClientRect().top - window.innerHeight);
+
+            const 좌표 = thisIsGirl.getBoundingClientRect().top - window.innerHeight;
+            const 백분율 = -(좌표 + 300) / 600;
+
+            console.log(백분율);
+
+            thisIsGirl.style.opacity = `${백분율}`;
+
+            // -300에 나타나기 시작해서
+            // -900에 완전히 나타나게 하고싶다!
+
+            for (let i = 0; i < scrollContent.length; i++) {
+
+
+                console.log(scrollContent[i].getBoundingClientRect().top - window.innerHeight < 0)
+                if (scrollContent[i].getBoundingClientRect().top - window.innerHeight < 0) {
+                    scrollContent[i].classList.add('active');
+                } else {
+                    scrollContent[i].classList.remove('active');
+                }
             }
         })
+
     </script>
-    
 </body>
+
 </html>

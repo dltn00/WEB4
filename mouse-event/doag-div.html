@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
 
-        .drag-able{
-            width: 100px;
-            height: 100px;
-            background-color: cadetblue;
+        body {
+            height: 2000px;
+            background-color: pink;
         }
 
+        .drag-able {
 
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
     </style>
 </head>
-<body>
-    <div class="drag-able"></div>
 
+<body>
+    <div class="test"></div>
+    <div class="drag-able"></div>
     <script>
         const div = document.querySelector('.drag-able');
-        let clickX, clickY ;
-        let isclicked = false;
+        let clickX, clickY;
+        let isClicked = false;
         let endX = 0, endY = 0;
-        let moveX =0, moveY = 0;
-
-        div.addEventListener('mousedown', (e) =>{
-            isclicked = true;
+        let moveX = 0, moveY = 0;
+        div.addEventListener('mousedown', (e) => {
+            isClicked = true;
             clickX = e.clientX;
             clickY = e.clientY;
-            moveX = 0 ;
-            moveY = 0 ;
+            moveX = 0;
+            moveY = 0;
         })
+        window.addEventListener('mousemove', (e) => {
+            if (isClicked) {
 
-        window.addEventListener('mousemove', (e) =>{
-            if(isclicked){
-                const top = e.clientY < 0;
-                const left = e.clientX < 0;
-                const bottom = e.clientY > window.innerHeight;
-                const right = e.clientX > window.innerWidth;
+                const top = e.clientY > 0;
+                const left = e.clientX > 0;
+                const bottom = e.clientY < window.innerHeight;
+                const right = e.clientX < window.innerWidth;
 
-                
-            if(top && left && bottom && right) {
-                isclicked = false;
-                moveX = e.clientX - clickX;
-                moveY = e.clientY - clickY;
-                div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`;
-                
-            } else {
-                isclicked = false
-                div.style.transform = `translate(${endX}px, ${endY})`;
-            }
-            }
-        })
+                console.log(top, left, bottom, right)
+                if (top && left && bottom && right) {
+                    moveX = e.clientX - clickX;
+                    moveY = e.clientY - clickY;
+                    div.style.transform = `translate(${moveX + endX}px,${moveY + endY}px)`
+                } else {
+                    isClicked = false;
+                    div.style.transform = `translate(${endX}px,${endY}px)`
+                }
 
-        div.addEventListener('mouseup', ()=>{
-            if(isclicked) {
 
-                    isclicked = false;
-                    endX = moveX + endX;
-                    endY = moveY + endY;
             }
         })
+        div.addEventListener('mouseup', () => {
+            if (isClicked) {
+                isClicked = false;
+                endX = moveX + endX;
+                endY = moveY + endY;
+            }
+
+        })
+
+
     </script>
 </body>
+
 </html>
