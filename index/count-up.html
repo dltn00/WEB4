@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="count-place">0</p>
+    <script>
+        const goal = 123456;
+        const countPlace = document.querySelector('.count-place');
+        const countDuration = 5000;
+        const framePerSec = 60;
+
+        const 실행횟수 = countDuration * framePerSec /1000;
+
+        for(let i =0 ; i < 실행횟수; i++) {
+            const 진행도 = i / (실행횟수 -1);
+            console.log(진행도);
+         
+        }
+
+        // for (let i = 0; i <= goal; i++) {
+        //     setTimeout(() => {
+        //         countPlace.innerText = i;
+        //         console.log(i / goal)
+        //     }, i / goal * 5000);
+        // }
+
+    </script>
+</body>
+
+</html>
