@@ -9,19 +9,9 @@
 
 <body>
     <p class="count-place">0</p>
+    <p class="count-number2">0</p>
     <script>
-        const goal = 123456;
-        const countPlace = document.querySelector('.count-place');
-        const countDuration = 5000;
-        const framePerSec = 60;
 
-        const 실행횟수 = countDuration * framePerSec /1000;
-
-        for(let i =0 ; i < 실행횟수; i++) {
-            const 진행도 = i / (실행횟수 -1);
-            console.log(진행도);
-         
-        }
 
         // for (let i = 0; i <= goal; i++) {
         //     setTimeout(() => {
@@ -29,6 +19,67 @@
         //         console.log(i / goal)
         //     }, i / goal * 5000);
         // }
+
+        // let timer = 0;
+        // let now = 0;
+        // let count = 0;
+        // while (true) {
+        //     setTimeout(() => {
+        //         countPlace.innerText = Number(countPlace.innerText) + parseInt(goal / (count + 2));
+        //         console.log("실행!");
+        //         console.log(parseInt(goal / (count + 2)))
+        //         count++;
+        //     }, timer);
+        //     timer += 100;
+        //     if (timer === 10000) {
+        //         setTimeout(() => {
+        //             countPlace.innerText = goal;
+        //         }, timer);
+        //         break;
+        //     }
+        // }
+        const countPlace = document.querySelector('.count-place');
+        const count2 = document.querySelector('.count-number2');
+
+
+
+        function easeOutCubic(x) {
+            return 1 - Math.pow(1 - x, 3);
+        }
+
+        makeCountUp(countPlace,1234123,4000,60)
+        makeCountUp(count2,123,5000,60);
+
+        function makeCountUp(target,goal,countDuration,framePerSec) {
+            
+            const 실행횟수 = countDuration * framePerSec / 1000;
+            
+            for (let i = 0; i < 실행횟수; i++) {
+                
+                const 진행도 = i / (실행횟수 - 1);
+                setTimeout(() => {
+                    target.innerText = parseInt(easeOutCubic(진행도) * goal);
+                }, (countDuration / 실행횟수) * (i + 1));
+            }
+        }
+            
+            //0,4 ->    0         
+            //1,4 ->    0.25
+            //2,4 ->    0.5
+            //3,4 ->    0.75
+            //4,4 ->    1
+            
+            //1일때 실행횟수 5번
+            //2일때 실행횟수 10번
+        //3일때 실행횟수 15번
+
+
+
+
+
+        // 진행도를 0~1로 통제할수 있게 되었다
+
+
 
     </script>
 </body>
