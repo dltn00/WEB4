@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCAR</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header-wrapper{
+            position: relative;
+            height: 60px;
+        }
+        .logo{
+            position: fixed;
+            width: 112px;
+            top: 2%;
+            left: 40px;
+            
+        }
+        header svg {
+            fill: #ffffff;
+        }
+        header.scrolled svg {
+            fill: #00B8FF;
+        }
+        #hambuger{
+            width: 36px;
+            height: 14px;
+            position: fixed;
+            top: 2%;
+            right: 40px;
+            
+        }
+        #hambuger>span{
+            width: 26px;
+            height: 3px;
+            background-color: #ffffff;
+            position: absolute;    
+        }
+        .hambuger-2th{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        h1{
+            max-width: 768px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 48pt;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+        #main-title{
+            width: 100%;
+            height: 100vh;
+            background-image: url(./main_visual_fullscreen.jpg);
+            background-position: center;
+            background-size: cover; 
+        }
+        #main-intro-container{
+            padding-bottom: 120px;
+        }
+        .main-intro{
+            width: 800px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+
+        }
+        .main-intro-wrapper{
+            margin-bottom: 36px;
+        }
+        .main-intro>img{
+            width: 800px;
+            height: 600px;
+            margin-top: 48px;
+        }
+        .main-intro>h2{
+            font-size:  40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: rgb(77, 77, 77);
+        }
+        .main-intro>p{
+            line-height: 24px;
+            font-size: 18px;
+            color: rgb(167, 167, 167);
+            font-weight: bold;
+            margin-top: 24px;
+        }
+        .main-intro>h2::after{
+            display: inline-block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #0bb8ff;
+        }
+            
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #main-banner-container{
+            min-width: 768px;
+            width: 100%;
+            height: 400px;
+            background-color: rgb(223, 221, 221);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 0 ;
+            position: relative;
+        }
+        .main-banner-wrapper{
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .blue-skew{
+            
+            width: 100%;
+            height: 100%;
+            background-color: #0bb8ff;
+            position: absolute;
+            left: 70%;
+            transform: skewx(-30deg);
+            transform-origin: bottom left;
+            
+            
+        }
+        .blue-text{
+            color: #0bb8ff;
+            
+        }
+        .gray-text{
+            color: rgb(175, 173, 173);
+        }
+        footer{
+            width: 100%;
+            background-color: rgb(30, 43, 48);
+            padding-top: 48px;
+        }
+        #footer-container{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .footer-contents-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding-top: 12px;
+        }
+        .footer-contents-list>a{
+            color: rgb(173, 173, 173);
+            font-size: 15px;
+        }
+        .footer-contents-important>a{
+            color: white;
+        }
+        .footer-end{
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            padding-top: 24px;
+            color: #646f7c;
+            line-height: 24px;
+            padding-bottom: 100px;
+        }
+        .compuny>a{
+            color: rgb(173, 173, 173);
+            text-decoration: underline;
+        }
+        .app-download{
+            width: 100%;
+            height: 90px;
+            background-color: #0bb8ff;
+            position: fixed;
+            bottom: 0;
+            left: 80%;
+            transform: skewX(-30deg);
+        }
+        .i-appicon{
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            position: fixed;
+            bottom: 2%;
+            right: 18%;
+        }
+        .socar-app-text{
+            color: white;
+            position: fixed;
+            bottom: 3%;
+            right: 5%;
+            font-size: 20px;
+            font-weight: bold;
+
+
+        }
+    </style>
+</head>
+<body>
+    <header id="socar-header"> 
+        <div class="header-container">
+            <div class="header-wrapper">
+                <a href="" class="logo">
+                    <img src="./logo-w.svg" alt="" id="logo"></div>
+                </a>
+                <div id="hambuger">
+                    <span class="hambuger-1th span"></span>
+                    <span class="hambuger-2th span"></span>
+                </div>
+            </div>
+             
+        </div>
+    </header>
+    <main>
+        <section id="main-title">
+            <h1>차가 필요한 <br>모든 순간,쏘카</h1>
+        </section>
+        <section id="main-intro-container">
+            <div class="main-intro-wrapper">
+                <div class="main-intro">
+                    <h2>24시간 언제나</h2>
+                    <div class="blue-round"></div>
+                    <p>한밤중이나 주말에도 스마트폰으로<br>시간에 구애받지 않고<br>쏘카와 함께 이동하세요.</p>
+                    <img src="../IMG/usp_a.jpg" alt="">
+                </div>
+                <div class="main-intro">
+                    <h2>원하는 곳에서</h2>
+                    <div class="blue-round"></div>
+                    <p>내 주변 3분 거리 쏘카존에서<br>혹은 내가 있는 곳으로 쏘카를 불러<br>어디서나 편하게 출발하세요.</p>
+                    <img src="../IMG/usp_b.jpg" alt="">
+                </div>
+                <div class="main-intro">
+                    <h2>필요한 시간만큼</h2>
+                    <div class="blue-round"></div>
+                    <p>간단한 장보기부터 주말여행까지<br>10분 단위로 원하는 만큼만 이용하세요.</p>
+                    <img src="../IMG/usp_c.jpg" alt="">
+                </div>
+                <div class="main-intro">
+                    <h2>다양한 차종을</h2>
+                    <div class="blue-round"></div>
+                    <p>연인과의 드라이브부터 가족 캠핑까지<br>상황에 맞게 50여 종의 차량을<br>선택해서 이용하세요.</p>
+                    <img src="../IMG/usp_d.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="main-banner-container">
+                <div class="main-banner-wrapper">
+                    <li>
+                        <p>
+                        <span class="blue-text">8,796,684</span><span class="gray-text">명의 회원이 쏘카와 <br>함께하고 있습니다.<br>지금 바로</span>
+                        <span class="blue-text">쏘카 드라이브</span><br><span class="gray-text">를 시작하세요.</span></p>
+                    </li>
+                </div>
+                <div class="blue-skew"></div> 
+    </main>
+    <footer>
+        <section id="footer-container">
+            <div class="footer-icon">
+                <a href=""><img src="./i-instagram.svg" alt="인스타"></a>
+                <a href=""><img src="./i-facebook.svg" alt="페이스북"></a>
+                <a href=""><img src="./i-youtube.svg" alt="유튜브"></a>
+                <a href=""><img src="./i-blog.svg" alt="블로그"></a>
+            </div>
+            <div class="footer-contents-wrapper">
+                
+                <li class="footer-contents-list"><a href="">회사소개</a></li>
+                <li class="footer-contents-list"><a href="">인재채용</a></li>
+                <li class="footer-contents-list"><a href="">나눔카</a></li>
+                <li class="footer-contents-list"><a href="">이용약관</a></li>
+                <li class="footer-contents-important"><a href="">개인정보처리방침</a></li>
+                <li class="footer-contents-important"><a href="">위치정보 이용약관</a></li>
+                <li class="footer-contents-important"><a href=""> 차량손해면책제도</a></li>
+                <li class="footer-contents-list"><a href="">고객센터</a></li>
+                <li class="footer-contents-list"><a href="">제휴 문의</a></li>
+            </div>
+            <div class="footer-end">
+                <p class="juso">
+                    주소. 제주특별자치도 제주시 연미길 42(오라삼동)<br>
+                    전화. 1661-3315 <br>
+                    팩스. 02-6969-9333</p>
+                <p class="compuny">
+                    (주)쏘카 통신판매업 <a href="">사업자정보 확인</a><br>
+                    신고: 제 2019-제주오라-3호, 사업자등록번호: 616-81-90529, 대표자: 박재욱
+                <br>
+                    &copy; 2019 SOCAR All rights reserved.
+                </p>
+            </div>
+            <a href="" id="app-wrapper">
+                <div class="app-download"></div>
+                <img class="i-appicon" src="./i-appicon.svg" alt="">
+                <p class="socar-app-text">쏘카 앱 다운로드↓</p>
+            </a>
+                
+            
+    </section>
+    </footer>
+    <script>
+        const header = document.getElementById('socar-header');
+        header.style.position = 'fixed';
+        // header.style.top = '0';
+        header.style.width = '100%'
+        header.style.transition = '0.5s'
+        
+            
+        let beforeScroll = 0;
+        window.addEventListener('scroll', () => {
+            if (beforeScroll < window.scrollY) {
+                header.style.transform = 'translateY(-100%)'
+            } else {
+                header.style.transform = 'none'
+            }
+            beforeScroll = window.scrollY;
+
+            if (window.scrollY < 100) {
+                header.style.backgroundColor = 'transparent';
+                header.classList.add('scrolled');
+            }
+            else {
+                header.style.backgroundColor = '#FFFFFF80';
+                header.classList.remove('scrolled');
+            }
+        })
+    </script>
+</body>
+</html>
