@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #테스트{
+            height: 5000px;
+            background-color: linear-gradient(#aaa, 232);
+            position: relative;
+        }
+        #영상{
+            width: 100%;
+            height: 100vh;
+            background-color: yellow;
+            position: absolute;
+            
+            transition: 0.5s;
+
+        }
+
+        @keyframes identifier {
+            to {
+                transform: scaleX(0.9) scaleY(0.25);
+            }
+
+            50%{
+                transform: scaleX(1) scaleY(0.25);
+            }
+
+            100%{
+                transform: scaleX(1) scaleY(1);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+<div id="테스트">
+    <div id="영상"></div>
+</div></body>
+</html>
