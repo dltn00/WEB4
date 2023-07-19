@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #테스트 {
+            height: 5000px;
+            background: linear-gradient(#aaa, #222);
+            position: relative;
+        }
+
+        #영상 {
+            width: 100%;
+            height: 100vh;
+            /* background-color: yellow; */
+            position: absolute;
+            animation: to-big 2s ease-in-out both alternate infinite;
+
+            width: 80%;
+            height: 25vh;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 60vh;
+
+        }
+
+        #영상.정지 {
+            animation-play-state: paused;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        @keyframes to-big {
+            from {
+                width: 80%;
+                height: 25vh;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 60vh;
+            }
+
+            50% {
+                width: 100%;
+                height: 25vh;
+                left: 0;
+                transform: none;
+                top: 60vh;
+            }
+
+            to {
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                transform: none;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="테스트">
+        <div id="영상" class="정지">
+            <video src="[버거킹x디아블로4] 경배하라, 궁극의 불맛을🔥.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+    <script>
+        const 영상 = document.getElementById('영상');
+
+
+        let playState = false;
+        window.addEventListener('mousewheel', (e) => {
+
+            if (e.wheelDelta > 0) {
+                if (window.scrollY === 0 && playState) {
+                    e.preventDefault();
+
+                    영상.classList.remove('정지');
+                    setTimeout(() => {
+                        영상.classList.add('정지');
+                        playState = !playState;
+                    }, 2000);
+                }
+            } else {
+                //마우스휠 아래로
+
+                if (window.scrollY === 0 && !playState) {
+                    console.log(playState)
+                    e.preventDefault();
+
+                    영상.classList.remove('정지');
+                    setTimeout(() => {
+                        영상.classList.add('정지');
+                        playState = !playState;
+                    }, 2000);
+                }
+            }
+            console.log(e);
+
+
+
+
+
+        }, { passive: false })
+
+    </script>
+</body>
+
+</html>
