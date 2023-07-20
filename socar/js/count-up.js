@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <p class="count-place">0</p>
-    <p class="count-number2">0</p>
-    <script>
-
-
-        // for (let i = 0; i <= goal; i++) {
+      // for (let i = 0; i <= goal; i++) {
         //     setTimeout(() => {
         //         countPlace.innerText = i;
         //         console.log(i / goal)
@@ -38,15 +23,9 @@
         //         break;
         //     }
         // }
-        const countPlace = document.querySelector('.count-place');
-        const count2 = document.querySelector('.count-number2');
 
 
 
-        
-
-        makeCountUp(countPlace,1234123,4000,60)
-        makeCountUp(count2,123,5000,60);
 
         function makeCountUp(target,goal,countDuration,framePerSec) {
             
@@ -56,11 +35,11 @@
                 
                 const 진행도 = i / (실행횟수 - 1);
                 setTimeout(() => {
-                    target.innerText = parseInt(easeOutCubic(진행도) * goal).toLocaleString9;
+                    target.innerText = parseInt(easeOutCubic(진행도) * goal).toLocaleString();
                 }, (countDuration / 실행횟수) * (i + 1));
-                
+               
         }
-        function easeOutCubic(x) {
+         function easeOutCubic(x) {
             return 1 - Math.pow(1 - x, 3);
             }
         }
@@ -80,10 +59,3 @@
 
 
         // 진행도를 0~1로 통제할수 있게 되었다
-
-
-
-    </script>
-</body>
-
-</html>

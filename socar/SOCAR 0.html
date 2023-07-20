@@ -13,8 +13,38 @@
         
         .header-wrapper{
             position: relative;
-            height: 60px;
+            margin-top: 30px;
         }
+        header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        padding: 16px 32px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        }
+
+        header svg {
+            fill: white;
+        }
+
+        header.hide {
+            transform: translateY(-100%);
+        }
+
+        header.scrolled {
+            background-color: #ffffff80;
+        }
+
+        header.scrolled svg {
+            fill: var(--main-color);
+        }
+
+        header.scrolled .hamberger::before,
+        header.scrolled .hamberger::after {
+            background-color: var(--main-color);
+        }
+
         .logo{
             position: fixed;
             width: 112px;
@@ -230,25 +260,25 @@
                     <h2>24시간 언제나</h2>
                     <div class="blue-round"></div>
                     <p>한밤중이나 주말에도 스마트폰으로<br>시간에 구애받지 않고<br>쏘카와 함께 이동하세요.</p>
-                    <img src="../IMG/usp_a.jpg" alt="">
+                    <img src="usp_a.jpg" class="scroll-opacity" alt="">
                 </div>
                 <div class="main-intro">
                     <h2>원하는 곳에서</h2>
                     <div class="blue-round"></div>
                     <p>내 주변 3분 거리 쏘카존에서<br>혹은 내가 있는 곳으로 쏘카를 불러<br>어디서나 편하게 출발하세요.</p>
-                    <img src="../IMG/usp_b.jpg" alt="">
+                    <img src="usp_b.jpg" class="scroll-opacity" alt="">
                 </div>
                 <div class="main-intro">
                     <h2>필요한 시간만큼</h2>
                     <div class="blue-round"></div>
                     <p>간단한 장보기부터 주말여행까지<br>10분 단위로 원하는 만큼만 이용하세요.</p>
-                    <img src="../IMG/usp_c.jpg" alt="">
+                    <img src="usp_c.jpg" class="scroll-opacity" alt="">
                 </div>
                 <div class="main-intro">
                     <h2>다양한 차종을</h2>
                     <div class="blue-round"></div>
                     <p>연인과의 드라이브부터 가족 캠핑까지<br>상황에 맞게 50여 종의 차량을<br>선택해서 이용하세요.</p>
-                    <img src="../IMG/usp_d.jpg" alt="">
+                    <img src="usp_d.jpg" class="scroll-opacity" alt="">
                 </div>
             </div>
         </section>
@@ -256,7 +286,7 @@
                 <div class="main-banner-wrapper">
                     <li>
                         <p>
-                        <span class="blue-text">8,796,684</span><span class="gray-text">명의 회원이 쏘카와 <br>함께하고 있습니다.<br>지금 바로</span>
+                        <span class="blue-text count-up" ></span><span class="gray-text">명의 회원이 쏘카와 <br>함께하고 있습니다.<br>지금 바로</span>
                         <span class="blue-text">쏘카 드라이브</span><br><span class="gray-text">를 시작하세요.</span></p>
                     </li>
                 </div>
@@ -303,30 +333,8 @@
             
     </section>
     </footer>
-    <script>
-        const header = document.getElementById('socar-header');
-        header.style.position = 'fixed';
-        header.style.top = '0';
-        header.style.width = '100%'
-        header.style.transition = '0.5s'
-        header.style.backgroundColor = 'transparent';
-
-        let beforeScroll = 0;
-        window.addEventListener('scroll', () => {
-            if (beforeScroll < window.scrollY) {
-                header.style.transform = 'translateY(-100%)'
-            } else {
-                header.style.transform = 'none'
-            }
-            beforeScroll = window.scrollY;
-
-            if (window.scrollY < 100) {
-                header.style.backgroundColor = 'transparent';
-            }
-            else {
-                header.style.backgroundColor = '#FFFFFF80';
-            }
-        })
-    </script>
+    <script src="js/makeScrollContents.js"></script>
+    <script src="js/count-up.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
