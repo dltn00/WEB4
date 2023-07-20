@@ -1,0 +1,17 @@
+.scroll-contents {
+    opacity: 0;
+    transition: 1500ms;
+}
+
+.scroll-contents.left {
+    transform: translateX(-200px);
+}
+
+.scroll-contents.right {
+    transform: translateX(200px);
+}
+
+.scroll-contents.active {
+    opacity: 1;
+    transform: none;
+}

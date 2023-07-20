@@ -106,7 +106,8 @@ h1>a {
 #cover {
     height: 100vh;
     background-image: url(../image/main_visual_fullscreen.jpg);
-    background-position: 30% center;
+    background-size: cover;
+    background-position: 50% center;
     display: flex;
     justify-content: center;
     align-items: center;
