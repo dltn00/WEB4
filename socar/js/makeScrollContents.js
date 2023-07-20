@@ -3,15 +3,15 @@
 function makeScrollContents(scrollContent, vector) {
     if (vector === 'left') {
         for (let i = 0; i < scrollContent.length; i++) {
-            scrollContent[i].classList.add('left')
+            scrollContent[i].classList.add('left');
         }
     } else {
         for (let i = 0; i < scrollContent.length; i++) {
-            scrollContent[i].classList.add('right')
+            scrollContent[i].classList.add('right');
         }
     }
     for (let i = 0; i < scrollContent.length; i++) {
-        scrollContent[i].classList.add('scroll-contents')
+        scrollContent[i].classList.add('scroll-contents');
     }
 
     window.addEventListener('scroll', (e) => {
