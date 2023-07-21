@@ -24,4 +24,13 @@ window.addEventListener('scroll', () => {
     makeScrollContents(scrollContent);
 
     const countPlace = document.querySelector('.count-up');
-    makeCountUp(countPlace, 8796684, 4000, 60);
+    makeCountUp(countPlace, 8796684, 4000, 24);
+
+    const lnclien = document.querySelector('.incline');
+
+    incline.style.left = '50%';
+    window.addEventListener('scroll', ()=> {
+        if(incline.getBoundingClinetRect().top - window.innerHeight < 0) {
+            incline.style.left = '0%'; 
+        }
+    })

@@ -10,6 +10,7 @@
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
+
 }
 
 .unit-link {
@@ -132,7 +133,6 @@ h1>a {
     margin: 0 auto;
     margin-bottom: 160px;
 }
-
 .advantage:last-child {
     margin-bottom: 0;
 }
@@ -195,6 +195,8 @@ h1>a {
     height: 100%;
     background-color: var(--main-color);
     transform: translateX(80%) skewX(-30deg);
+    left: 0%;
+    transition: 1s;
 }
 
 footer {
@@ -272,6 +274,7 @@ footer nav {
     overflow: hidden;
     width: 60px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.417);
+    animation: 디졸브 2.5s     both;
 }
 
 #app-download>p {
@@ -279,6 +282,7 @@ footer nav {
     z-index: 1;
     color: white;
     font-size: 20px;
+    animation: 디졸브 1s     both;
 }
 
 #app-download>p::after {
@@ -287,11 +291,14 @@ footer nav {
     width: 16px;
     height: 16px;
     background-image: url(../image/arrow-down.svg);
+    
 }
 
 
 #app-download>.incline {
     transform: skewX(-30deg) translateX(24px);
+    animation: 나타나기 1.5s     both;
+    
 }
 
 @media screen and (max-width : 800px) {
@@ -318,4 +325,28 @@ footer nav {
     }
 
 
+}
+
+@keyframes 디졸브  {
+    from{
+        opacity: 0;
+
+    }
+
+    to{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes 나타나기  {
+    from{
+        left: 100%;
+
+    }
+
+    to{
+        left: 0%;
+    }
+    
 }
