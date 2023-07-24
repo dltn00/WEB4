@@ -10,7 +10,6 @@
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
-
 }
 
 .unit-link {
@@ -55,11 +54,13 @@ header.scrolled .hamberger::after {
 .header-inner {
     display: flex;
     justify-content: space-between;
+    
 }
 
 h1 {
     width: 112px;
     position: relative;
+    z-index: 10;
 }
 
 h1>a {
@@ -84,11 +85,12 @@ h1>a {
 .hamberger {
     width: 32px;
     height: 32px;
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
+    z-index: 10;
+    position: relative;
 }
 
 .hamberger::before,
@@ -98,17 +100,29 @@ h1>a {
     width: 80%;
     height: 3px;
     background-color: #fff;
+    position: absolute;
+    transition: 0.3s;
 }
-
-.hamberger::after {
-    margin-left: auto;
+.hamberger::before{
+    transform: translate(4px,5px);
+}
+.hamberger::after{
+    transform: translate(-4px,-5px);
+}
+.hamberger::after>a:active{
+    transform:rotate(45deg);
+}
+.hamberger::before>a:active{
+    transform:rotate(-45deg);
+}
+main {
+    overflow: hidden;
 }
 
 #cover {
     height: 100vh;
     background-image: url(../image/main_visual_fullscreen.jpg);
-    background-size: cover;
-    background-position: 50% center;
+    background-position: 30% center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,6 +147,7 @@ h1>a {
     margin: 0 auto;
     margin-bottom: 160px;
 }
+
 .advantage:last-child {
     margin-bottom: 0;
 }
@@ -179,6 +194,7 @@ h1>a {
     line-height: 150%;
     color: var(--paragraph-font-color);
     overflow: hidden;
+
 }
 
 .point-blue {
@@ -190,13 +206,13 @@ h1>a {
 }
 
 .incline {
+    transition: 1s;
+    left: 0%;
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: var(--main-color);
     transform: translateX(80%) skewX(-30deg);
-    left: 0%;
-    transition: 1s;
 }
 
 footer {
@@ -274,7 +290,8 @@ footer nav {
     overflow: hidden;
     width: 60px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.417);
-    animation: 디졸브 2.5s     both;
+
+    animation: 디졸브 1s 0.66s both;
 }
 
 #app-download>p {
@@ -282,7 +299,8 @@ footer nav {
     z-index: 1;
     color: white;
     font-size: 20px;
-    animation: 디졸브 1s     both;
+
+    animation: 디졸브 1s both;
 }
 
 #app-download>p::after {
@@ -291,14 +309,13 @@ footer nav {
     width: 16px;
     height: 16px;
     background-image: url(../image/arrow-down.svg);
-    
 }
 
 
 #app-download>.incline {
     transform: skewX(-30deg) translateX(24px);
-    animation: 나타나기 1.5s     both;
-    
+
+    animation: 나타나기 1s 0.33s both;
 }
 
 @media screen and (max-width : 800px) {
@@ -327,26 +344,79 @@ footer nav {
 
 }
 
-@keyframes 디졸브  {
-    from{
+@keyframes 디졸브 {
+    from {
         opacity: 0;
-
     }
 
-    to{
+    to {
         opacity: 1;
     }
-    
 }
 
-@keyframes 나타나기  {
-    from{
+@keyframes 나타나기 {
+    from {
         left: 100%;
-
     }
 
-    to{
+    to {
         left: 0%;
     }
+}
+
+.hamberger-click {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000dd;
+    display: none;
+}
+
+.hamberger-nav {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #28323c;
+    height: 100vh;
+    padding: 0 32px;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.hamberger-click.active{
+    display: block;
+}
+.hamberger-click.active>.hamberger-nav{
+    transform: none;
+}
+.hamberger-nav>div {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    border-bottom: 1px solid #555;
+}
+
+.hamberger-nav>div:last-child {
+    border: none;
+}
+
+.hamberger-nav>div>a {
+    padding: 16px 0;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.hamberger-nav>div>a:hover {
+    color: var(--main-color);
+
+}
+.hamberger>a:active{
+    position: absolute;
+    right: 45%;
     
 }

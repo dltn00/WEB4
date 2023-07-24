@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
 })
 
     const scrollContent = document.querySelectorAll('.advantage > *');
-    makeScrollContents(scrollContent);
+    makeScrollContent(scrollContent);
 
     const countPlace = document.querySelector('.count-up');
     makeCountUp(countPlace, 8796684, 4000, 24);
@@ -33,4 +33,18 @@ window.addEventListener('scroll', () => {
         if(incline.getBoundingClinetRect().top - window.innerHeight < 0) {
             incline.style.left = '0%'; 
         }
+    })
+
+    const hamburgerButton = document.querySelector('.hamburger');
+    const hamburgerClick = document.querySelector('.hameburger-click');
+    const hamburgerNav = document.querySelector('.hameburger-nav');
+    hamburgerButton.addEventListener('click', ()=>{
+        hamburgerButton.classList.add('active');
+        hamburgerClick.classList.add('active');
+
+        setTimeout(() => {
+            hameburgerNav.style.translate = 'none'; 
+            
+        }, 1);
+
     })
