@@ -20,31 +20,36 @@ window.addEventListener('scroll', () => {
     이전좌표 = window.scrollY;
 })
 
-    const scrollContent = document.querySelectorAll('.advantage > *');
-    makeScrollContent(scrollContent);
+const scrollContent = document.querySelectorAll('.advantage > *')
+makeScrollContents(scrollContent);
 
-    const countPlace = document.querySelector('.count-up');
-    makeCountUp(countPlace, 8796684, 4000, 24);
+makeCountUp(document.querySelector('.count-up'), 8985351, 4000, 24);
 
-    const lnclien = document.querySelector('.incline');
 
-    incline.style.left = '50%';
-    window.addEventListener('scroll', ()=> {
-        if(incline.getBoundingClinetRect().top - window.innerHeight < 0) {
-            incline.style.left = '0%'; 
-        }
-    })
+const incline = document.querySelector('.incline');
 
-    const hamburgerButton = document.querySelector('.hamburger');
-    const hamburgerClick = document.querySelector('.hameburger-click');
-    const hamburgerNav = document.querySelector('.hameburger-nav');
-    hamburgerButton.addEventListener('click', ()=>{
-        hamburgerButton.classList.add('active');
-        hamburgerClick.classList.add('active');
+incline.style.left = '50%';
 
-        setTimeout(() => {
-            hameburgerNav.style.translate = 'none'; 
-            
-        }, 1);
+window.addEventListener('scroll', () => {
+    if (incline.getBoundingClientRect().top - window.innerHeight < 0) {
+        incline.style.left = '0%';
+    }
+})
 
-    })
+
+
+
+const hambergerButton = document.querySelector('.hamberger');
+const hambergerClick = document.querySelector('.hamberger-click');
+const hambergerNav = document.querySelector('.hamberger-nav')
+
+
+hambergerButton.addEventListener('click', () => {
+    hambergerButton.classList.add('active')
+    hambergerClick.classList.add('active');
+
+    setTimeout(() => {
+        hambergerNav.style.transform = `none`;
+    }, 1);
+
+})

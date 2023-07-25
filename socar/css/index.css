@@ -54,7 +54,6 @@ header.scrolled .hamberger::after {
 .header-inner {
     display: flex;
     justify-content: space-between;
-    
 }
 
 h1 {
@@ -85,12 +84,13 @@ h1>a {
 .hamberger {
     width: 32px;
     height: 32px;
+    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
-    z-index: 10;
     position: relative;
+    z-index: 10;
 }
 
 .hamberger::before,
@@ -103,18 +103,25 @@ h1>a {
     position: absolute;
     transition: 0.3s;
 }
-.hamberger::before{
-    transform: translate(4px,5px);
+
+.hamberger::after {
+    transform: translate(-4px, -5px);
 }
-.hamberger::after{
-    transform: translate(-4px,-5px);
+
+.hamberger::before {
+    transform: translate(4px, 5px);
 }
-.hamberger::after>a:active{
-    transform:rotate(45deg);
+
+.hamberger.active::before {
+    transform: rotate(45deg);
 }
-.hamberger::before>a:active{
-    transform:rotate(-45deg);
+
+.hamberger.active::after {
+    transform: rotate(-45deg);
 }
+
+
+
 main {
     overflow: hidden;
 }
@@ -194,7 +201,6 @@ main {
     line-height: 150%;
     color: var(--paragraph-font-color);
     overflow: hidden;
-
 }
 
 .point-blue {
@@ -375,22 +381,27 @@ footer nav {
 }
 
 .hamberger-nav {
-    width: 30%;
+    width: 500px;
     position: absolute;
     top: 0;
     right: 0;
     background-color: #28323c;
     height: 100vh;
     padding: 0 32px;
-    transform: translateX(100%);
+
     transition: 0.5s;
+    transform: translateX(100%);
 }
-.hamberger-click.active{
+
+.hamberger-click.active {
+
     display: block;
 }
-.hamberger-click.active>.hamberger-nav{
-    transform: none;
-}
+
+/* .hamberger-click.active>.hamberger-nav { */
+    /* transform: none; */
+/* } */
+
 .hamberger-nav>div {
     display: flex;
     flex-direction: column;
@@ -413,10 +424,4 @@ footer nav {
 
 .hamberger-nav>div>a:hover {
     color: var(--main-color);
-
-}
-.hamberger>a:active{
-    position: absolute;
-    right: 45%;
-    
 }
