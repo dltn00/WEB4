@@ -46,8 +46,8 @@ header.scrolled svg {
     fill: var(--main-color);
 }
 
-header.scrolled .hamberger::before,
-header.scrolled .hamberger::after {
+header.scrolled .hamburger::before,
+header.scrolled .hamburger::after {
     background-color: var(--main-color);
 }
 
@@ -81,7 +81,7 @@ h1>a {
     top: 50%;
 }
 
-.hamberger {
+.hamburger {
     width: 32px;
     height: 32px;
     /* background-color: blue; */
@@ -93,8 +93,8 @@ h1>a {
     z-index: 10;
 }
 
-.hamberger::before,
-.hamberger::after {
+.hamburger::before,
+.hamburger::after {
     display: block;
     content: '';
     width: 80%;
@@ -104,19 +104,19 @@ h1>a {
     transition: 0.3s;
 }
 
-.hamberger::after {
+.hamburger::after {
     transform: translate(-4px, -5px);
 }
 
-.hamberger::before {
+.hamburger::before {
     transform: translate(4px, 5px);
 }
 
-.hamberger.active::before {
+.hamburger.active::before {
     transform: rotate(45deg);
 }
 
-.hamberger.active::after {
+.hamburger.active::after {
     transform: rotate(-45deg);
 }
 
@@ -370,7 +370,7 @@ footer nav {
     }
 }
 
-.hamberger-click {
+.hamburger-click {
     position: absolute;
     left: 0;
     top: 0;
@@ -380,7 +380,7 @@ footer nav {
     display: none;
 }
 
-.hamberger-nav {
+.hamburger-nav {
     width: 500px;
     position: absolute;
     top: 0;
@@ -393,27 +393,27 @@ footer nav {
     transform: translateX(100%);
 }
 
-.hamberger-click.active {
+.hamburger-click.active {
 
     display: block;
 }
 
-/* .hamberger-click.active>.hamberger-nav { */
+/* .hamburger-click.active>.hamburger-nav { */
     /* transform: none; */
 /* } */
 
-.hamberger-nav>div {
+.hamburger-nav>div {
     display: flex;
     flex-direction: column;
     padding: 32px 0;
     border-bottom: 1px solid #555;
 }
 
-.hamberger-nav>div:last-child {
+.hamburger-nav>div:last-child {
     border: none;
 }
 
-.hamberger-nav>div>a {
+.hamburger-nav>div>a {
     padding: 16px 0;
     font-size: 20px;
     color: white;
@@ -422,6 +422,6 @@ footer nav {
     transition: 0.5s;
 }
 
-.hamberger-nav>div>a:hover {
+.hamburger-nav>div>a:hover {
     color: var(--main-color);
 }

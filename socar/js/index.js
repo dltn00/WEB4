@@ -39,17 +39,47 @@ window.addEventListener('scroll', () => {
 
 
 
-const hambergerButton = document.querySelector('.hamberger');
-const hambergerClick = document.querySelector('.hamberger-click');
-const hambergerNav = document.querySelector('.hamberger-nav')
+const hamburgerButton = document.querySelector('.hamburger');
+const hamburgerClick = document.querySelector('.hamburger-click');
+const hamburgerNav = document.querySelector('.hamburger-nav');
+const hambergerTranstion = 500;
 
 
-hambergerButton.addEventListener('click', () => {
-    hambergerButton.classList.add('active')
-    hambergerClick.classList.add('active');
+
+
+hamburgerButton.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(hamburgerButton.classList.contains('active')){
+        closeHamburger(hambergerTranstion);
+    }else{
+        openHamburger(hambergerTranstion);
+    }
+})
+
+window.addEventListener('scroll',()=>{
+    if(hamburgerButton.classList.contains('active'))
+    closeHamburger(0);
+})
+
+function openHamburger() {
+    hamburgerButton.classList.add('active')
+    hamburgerClick.classList.add('active');
 
     setTimeout(() => {
-        hambergerNav.style.transform = `none`;
-    }, 1);
+        hamburgerNav.style.transform = `none`;
+    }, 0);
 
-})
+}
+
+hamburgerNav.style.transition = `${hambergerTranstion}ms`;
+
+function closeHamburger(transition){
+hamburgerButton.classList.remove('active');
+hamburgerNav.style.transform = 'translateX(100%)';
+
+
+setTimeout(() => {
+    hamburgerClick.classList.remove('active');
+}, transition);
+}
+
