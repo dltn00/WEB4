@@ -46,8 +46,8 @@ header.scrolled svg {
     fill: var(--main-color);
 }
 
-header.scrolled .hamberger::before,
-header.scrolled .hamberger::after {
+header.scrolled .hamburger::before,
+header.scrolled .hamburger::after {
     background-color: var(--main-color);
 }
 
@@ -59,6 +59,7 @@ header.scrolled .hamberger::after {
 h1 {
     width: 112px;
     position: relative;
+    z-index: 10;
 }
 
 h1>a {
@@ -80,7 +81,7 @@ h1>a {
     top: 50%;
 }
 
-.hamberger {
+.hamburger {
     width: 32px;
     height: 32px;
     /* background-color: blue; */
@@ -88,19 +89,41 @@ h1>a {
     flex-direction: column;
     justify-content: center;
     gap: 6px;
+    position: relative;
+    z-index: 10;
 }
 
-.hamberger::before,
-.hamberger::after {
+.hamburger::before,
+.hamburger::after {
     display: block;
     content: '';
     width: 80%;
     height: 3px;
     background-color: #fff;
+    position: absolute;
+    transition: 0.3s;
 }
 
-.hamberger::after {
-    margin-left: auto;
+.hamburger::after {
+    transform: translate(-4px, -5px);
+}
+
+.hamburger::before {
+    transform: translate(4px, 5px);
+}
+
+.hamburger.active::before {
+    transform: rotate(45deg);
+}
+
+.hamburger.active::after {
+    transform: rotate(-45deg);
+}
+
+
+
+main {
+    overflow: hidden;
 }
 
 main {
@@ -351,38 +374,78 @@ footer nav {
     }
 }
 
+<<<<<<< HEAD
 .hamberger-click {
     position: fixed;
+=======
+.hamburger-click {
+    position: absolute;
+>>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
     background-color: #000000dd;
+<<<<<<< HEAD
 }
 
 .hamberger-nav {
     width: 30%;
     position: fixed;
+=======
+    display: none;
+}
+
+.hamburger-nav {
+    width: 500px;
+    position: absolute;
+>>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     top: 0;
     right: 0;
     background-color: #28323c;
     height: 100vh;
     padding: 0 32px;
+<<<<<<< HEAD
     z-index: 1;
 }
 
 .hamberger-nav>div {
+=======
+
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+
+.hamburger-click.active {
+
+    display: block;
+}
+
+/* .hamburger-click.active>.hamburger-nav { */
+    /* transform: none; */
+/* } */
+
+.hamburger-nav>div {
+>>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     display: flex;
     flex-direction: column;
     padding: 32px 0;
     border-bottom: 1px solid #555;
 }
 
+<<<<<<< HEAD
 .hamberger-nav>div:last-child {
     border: none;
 }
 
 .hamberger-nav>div>a {
+=======
+.hamburger-nav>div:last-child {
+    border: none;
+}
+
+.hamburger-nav>div>a {
+>>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     padding: 16px 0;
     font-size: 20px;
     color: white;
@@ -391,6 +454,10 @@ footer nav {
     transition: 0.5s;
 }
 
+<<<<<<< HEAD
 .hamberger-nav>div>a:hover {
+=======
+.hamburger-nav>div>a:hover {
+>>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     color: var(--main-color);
 }

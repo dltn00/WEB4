@@ -20,17 +20,66 @@ window.addEventListener('scroll', () => {
     이전좌표 = window.scrollY;
 })
 
-    const scrollContent = document.querySelectorAll('.advantage > *');
-    makeScrollContents(scrollContent);
+const scrollContent = document.querySelectorAll('.advantage > *')
+makeScrollContents(scrollContent);
 
-    const countPlace = document.querySelector('.count-up');
-    makeCountUp(countPlace, 8796684, 4000, 24);
+makeCountUp(document.querySelector('.count-up'), 8985351, 4000, 24);
 
-    const lnclien = document.querySelector('.incline');
 
-    incline.style.left = '50%';
-    window.addEventListener('scroll', ()=> {
-        if(incline.getBoundingClinetRect().top - window.innerHeight < 0) {
-            incline.style.left = '0%'; 
-        }
-    })
+const incline = document.querySelector('.incline');
+
+incline.style.left = '50%';
+
+window.addEventListener('scroll', () => {
+    if (incline.getBoundingClientRect().top - window.innerHeight < 0) {
+        incline.style.left = '0%';
+    }
+})
+
+
+
+
+const hamburgerButton = document.querySelector('.hamburger');
+const hamburgerClick = document.querySelector('.hamburger-click');
+const hamburgerNav = document.querySelector('.hamburger-nav');
+const hambergerTranstion = 500;
+
+
+
+
+hamburgerButton.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(hamburgerButton.classList.contains('active')){
+        closeHamburger(hambergerTranstion);
+    }else{
+        openHamburger(hambergerTranstion);
+    }
+})
+
+window.addEventListener('scroll',()=>{
+    if(hamburgerButton.classList.contains('active'))
+    closeHamburger(0);
+})
+
+function openHamburger() {
+    hamburgerButton.classList.add('active')
+    hamburgerClick.classList.add('active');
+
+    setTimeout(() => {
+        hamburgerNav.style.transform = `none`;
+    }, 0);
+
+}
+
+hamburgerNav.style.transition = `${hambergerTranstion}ms`;
+
+function closeHamburger(transition){
+hamburgerButton.classList.remove('active');
+hamburgerNav.style.transform = 'translateX(100%)';
+
+
+setTimeout(() => {
+    hamburgerClick.classList.remove('active');
+}, transition);
+}
+
