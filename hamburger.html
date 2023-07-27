@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform_응용</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        /*div{
+            width: 300px; height: 300px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 300px;
+            /*transform: 다중작성 시 띄어쓰기로 구분/
+            transform: translate(100px,100px) rotate(30deg);
+            -ms-transform: translate(100px,100px) rotate(30deg); /*ie(익스플로러) 호환/
+            -moz-transform: translate(100px,100px) rotate(30deg); /*파이어폭스 호환/
+            -webkit-transform: translate(100px,100px) rotate(30deg); /*사파리, 크롬 호환/
+            -o-transform: translate(100px,100px) rotate(30deg); /*오페라 호환/
+        }*/
+
+        header{
+            width: 100%; height: 100px;
+            background-color: coral;
+            overflow: hidden; /*넘치지 않게 처리*/
+        }
+
+        #ham{
+            width: 64px; height: 57px;
+            padding: 22px;
+            background-color: #ff9c78;
+            overflow: hidden; /*넘치지 않게 처리*/
+            cursor: pointer; /*마우스커서 손 모양 변경*/
+        }
+
+        .line{
+            background-color: beige;
+            width: 56px; height: 5px;
+            margin: 10px 0px; /*상하10, 좌우0*/
+            transition-duration: 0.5s;
+        }
+
+        #main{
+            width: 100%;
+            overflow: hidden; /*높이 대신 설정*/
+            padding: 200px 0px; /*상하200, 좌우0*/
+            background-color: blanchedalmond;
+            text-align: center;
+            color: #ff9c78;
+        }
+
+        /*첫 번째 줄*/
+        #ham:hover #top{
+            transform: translateY(15px) rotate(45deg);
+            transform-origin: center;
+        }
+
+        /*두 번째 줄*/
+        #ham:hover #mid{
+            opacity: 0;
+        }
+
+        /*세 번째 줄*/
+        #ham:hover #btm{
+            transform: translateY(-15px) rotate(-45deg);
+            transform-origin: center;
+        }
+    </style>
+
+.hamberger {
+    width: 32px;
+    height: 32px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 24px 0;
+}
+
+.hamberger::before,
+.hamberger::after {
+    display: block;
+    content: '';
+    width: 80%;
+    height: 3px;
+    background-color: #fff;
+}
+
+.hamberger::after {
+    margin-left: auto;
+}
+</head>
+<body>
+    <!-- <div>test</div> -->
+
+    <header>
+        <div id="ham">
+            <div class="line" id="top"></div>
+            <div class="line" id="mid"></div>
+            <div class="line" id="btm"></div>
+        </div>
+    </header>
+
+    <div id="main">
+        <h1>안녕하세요!</h1>
+        <p>저희 웹페이지에 방문해주셔서 감사합니다.</p>
+    </div>
+</body>
+</html>
+[출처] 얼레벌레코딩일지-참고용. (HTML5&CSS3) CSS 햄버거 버튼(메뉴 버튼) → X자 버튼(닫기 버튼) 변형 아이콘 만들기|작성자 얼레벌레몬스터
+
+
+
+
+
+#ham{
+    width: 64px; height: 57px;
+    padding: 22px;
+    overflow: hidden; /*넘치지 않게 처리*/
+    cursor: pointer; /*마우스커서 손 모양 변경*/
+}
+
+.line{
+    background-color: beige;
+    width: 26px; height: 3px;
+    margin: 10px 0px; /*상하10, 좌우0*/
+    transition-duration: 0.5s;
+}
+
+#top{
+    transform: translateX(-50%);
+}
+
+/*첫 번째 줄*/
+#ham:active #top{
+    transform: translateY(6.5px) rotate(45deg);
+    transform-origin: center;
+}
+
+/*두 번째 줄*/
+#ham:active #btm{
+    transform: translateY(-6.5px) rotate(-45deg);
+    transform-origin: center;
+}
+.hamberger.nav{
+    width: 30%;
+}
+
+
+
+
+
+    <nav class="hamberger-nav">
+        <div>
+            <a href="#">이용 안내</a>
+            <a href="#">요금 안내</a>
+            <a href="#">혜택 안내</a>
+            <a href="#">쏘카존 개설 신청</a>
+        </div>
+        <div>
+            <a href="#">쏘카의 서비스</a>
+            <a href="#">쏘카 비즈니스</a>
+            <a href="#">쏘카 플랜</a>
+        </div>
+        <div>
+            <a href="#">회사소개</a>
+            <a href="#">공고</a>
+        </div>
