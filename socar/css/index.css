@@ -46,8 +46,8 @@ header.scrolled svg {
     fill: var(--main-color);
 }
 
-header.scrolled .hamburger::before,
-header.scrolled .hamburger::after {
+header.scrolled .hamberger::before,
+header.scrolled .hamberger::after {
     background-color: var(--main-color);
 }
 
@@ -81,7 +81,7 @@ h1>a {
     top: 50%;
 }
 
-.hamburger {
+.hamberger {
     width: 32px;
     height: 32px;
     /* background-color: blue; */
@@ -93,8 +93,8 @@ h1>a {
     z-index: 10;
 }
 
-.hamburger::before,
-.hamburger::after {
+.hamberger::before,
+.hamberger::after {
     display: block;
     content: '';
     width: 80%;
@@ -104,27 +104,23 @@ h1>a {
     transition: 0.3s;
 }
 
-.hamburger::after {
+.hamberger::after {
     transform: translate(-4px, -5px);
 }
 
-.hamburger::before {
+.hamberger::before {
     transform: translate(4px, 5px);
 }
 
-.hamburger.active::before {
+.hamberger.active::before {
     transform: rotate(45deg);
 }
 
-.hamburger.active::after {
+.hamberger.active::after {
     transform: rotate(-45deg);
 }
 
 
-
-main {
-    overflow: hidden;
-}
 
 main {
     overflow: hidden;
@@ -374,78 +370,47 @@ footer nav {
     }
 }
 
-<<<<<<< HEAD
 .hamberger-click {
-    position: fixed;
-=======
-.hamburger-click {
     position: absolute;
->>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
     background-color: #000000dd;
-<<<<<<< HEAD
-}
-
-.hamberger-nav {
-    width: 30%;
-    position: fixed;
-=======
     display: none;
 }
 
-.hamburger-nav {
+.hamberger-nav {
     width: 500px;
     position: absolute;
->>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     top: 0;
     right: 0;
     background-color: #28323c;
     height: 100vh;
     padding: 0 32px;
-<<<<<<< HEAD
-    z-index: 1;
-}
-
-.hamberger-nav>div {
-=======
 
     transition: 0.5s;
     transform: translateX(100%);
 }
 
-.hamburger-click.active {
+.hamberger-click.active {
 
     display: block;
 }
 
-/* .hamburger-click.active>.hamburger-nav { */
-    /* transform: none; */
-/* } */
 
-.hamburger-nav>div {
->>>>>>> 21bd7117702d404100e804843b7ce08e77444638
+.hamberger-nav>div {
     display: flex;
     flex-direction: column;
     padding: 32px 0;
     border-bottom: 1px solid #555;
 }
 
-<<<<<<< HEAD
 .hamberger-nav>div:last-child {
     border: none;
 }
 
 .hamberger-nav>div>a {
-=======
-.hamburger-nav>div:last-child {
-    border: none;
-}
-
-.hamburger-nav>div>a {
->>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     padding: 16px 0;
     font-size: 20px;
     color: white;
@@ -454,10 +419,6 @@ footer nav {
     transition: 0.5s;
 }
 
-<<<<<<< HEAD
 .hamberger-nav>div>a:hover {
-=======
-.hamburger-nav>div>a:hover {
->>>>>>> 21bd7117702d404100e804843b7ce08e77444638
     color: var(--main-color);
 }

@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .page-1{
-            width: 100%;
+
+        section {
             height: 100vh;
-            background-color: bisque;
         }
-        .page-2{
-            width: 100%;
-            height: 100vh; 
-            background-color: gray;
+
+        .page1 {
+            background-color: rgb(147, 186, 115);
         }
-        .page-3{
-            width: 100%;
-            height: 100vh; 
-            background-color: red;
+
+        .page2 {
+            background-color: rgb(137, 65, 65);
         }
-        .page-4{
-            width: 100%;
-            height: 100vh; 
-            background-color: blue;
+
+        .page3 {
+            background-color: rgb(81, 114, 119);
+        }
+
+        .page4 {
+            background-color: rgb(157, 104, 145);
         }
     </style>
 </head>
+
 <body>
-    <section class="container">
-        <div class="page-1"></div>
-        <div class="page-2"></div>
-        <div class="page-3"></div>
-        <div class="page-4"></div>
-    </section>
+    <section class="page1"></section>
+    <section class="page2"></section>
+    <section class="page3"></section>
+    <section class="page4"></section>
+
     <script>
 
-        window.addEventListener('mousewheel', (e)=>{
+        let index = 0;
+
+        window.addEventListener('mousewheel', (e) => {
             e.preventDefault();
-            window.scrollY
-
-        })
-
-
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+        }, { passive: false })
     </script>
 </body>
+
 </html>
