@@ -22,7 +22,6 @@ header{
 .header-text-container{
     display: flex;
     justify-content: space-between;
-    gap: 64px;
     font-weight: bold;
     font-size: 16px;
 }
