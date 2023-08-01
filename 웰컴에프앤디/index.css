@@ -14,7 +14,7 @@ header{
     top: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 32px 64px;
+    padding: 38px 120px;
     display: flex;
     justify-content: space-between;
     z-index: 10;
@@ -22,7 +22,9 @@ header{
 .header-text-container{
     display: flex;
     justify-content: space-between;
-    gap: 48px;
+    gap: 64px;
+    font-weight: bold;
+    font-size: 16px;
 }
 .header-text{
     color: white;
@@ -48,7 +50,7 @@ a{
     align-items: center;
     gap: 10px;
     position: relative;
-    left: 30px;
+    margin-left: 90px;
     
 }
 .menu-1{
