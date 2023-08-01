@@ -67,6 +67,40 @@ a{
 .cover>video{
     width: 100%;
 }
+#round-container{
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: -440px;
+    left: 68px;
+
+}
+.content-round{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+    
+}
+.content-line{
+    width: 64px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    left: 24px;
+}
+.content-round2{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+    
+}
+
+
+
 .main-img1{
     width: 40%;
 }
