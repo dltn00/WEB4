@@ -22,7 +22,7 @@ header{
 .header-text-container{
     display: flex;
     justify-content: space-between;
-    gap: 36px;
+    gap: 48px;
 }
 .header-text{
     color: white;
@@ -72,8 +72,8 @@ a{
     position: relative;
     display: flex;
     justify-content: space-between;
-    top: -440px;
-    left: 68px;
+    top: -720px;
+    left: 64px;
 
 }
 .content-round{
@@ -96,7 +96,28 @@ a{
     height: 24px;
     border-radius: 50%;
     background-color: red;
-    
+    position: relative;
+}
+.content-plus{
+    width: 30px;
+    height: 30px;
+}
+.round-plus1{
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    left: 7px;
+}
+.round-plus2{
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    transform: rotate(90deg);
 }
 
 
