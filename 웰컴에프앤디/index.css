@@ -127,7 +127,11 @@ p{
 }
 .cover-text{
     position: absolute;
-    top: 50px;
+    top: 400px;
+    left: 112px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .main-img1{
