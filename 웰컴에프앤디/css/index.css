@@ -72,69 +72,7 @@ p{
     margin: 0 auto;
     position: relative;
 }
-#round-container{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    top: 368px;
-    left: 64px;
 
-}
-.content-round{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-    position: absolute;
-    left: 56px;
-    
-}
-.content-line{
-    width: 56px;
-    height: 2px;
-    background-color: red;
-    position: absolute;
-    top: 10px;
-    left: 64px;
-}
-.content-round2{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-    position: relative;
-    left: 120px;
-}
-.content-plus{
-    width: 30px;
-    height: 30px;
-}
-.round-plus1{
-    width: 10px;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    top: 9px;
-    left: 5px;
-}
-.round-plus2{
-    width: 10px;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    top: 9px;
-    left: 5px;
-    transform: rotate(90deg);
-}
-.round-text{
-    position: absolute;
-    left: 146px;
-    font-weight: bold;
-    color: red;
-    font-size: 24px;
-    top: -30%;
-    opacity: 0;;
-}
 .cover-text{
     position: absolute;
     top: 400px;
@@ -247,6 +185,7 @@ p{
     color: #7a7a7a;
     padding-top: 24px;
 }
+
 .main-check{
     margin-top: 48px;
     color: #232323;
@@ -259,4 +198,7 @@ p{
     position: absolute;
     top: 96%;
     opacity: 0.8;
+}
+.main-content-round:hover{
+    width: 100px;
 }
