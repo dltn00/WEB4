@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/animation.css">
 
 </head>
 
@@ -15,15 +14,41 @@
     <header>
         <h1 id="logo">
             <a href="#">
-                <img src="image/header_logo_tp.svg" alt="웰컴에프앤디">
+                <img class="none-hover-logo" src="image/header_logo_tp.svg" alt="웰컴에프앤디">
+                <img class="hover-logo" src="image/header_logo.svg" alt="웰컴에프앤디">
             </a>
         </h1>
         <nav class="header-menu">
             <ul>
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">사업소개</a></li>
-                <li><a href="#">홍보센터</a></li>
-                <li><a href="#">인재채용</a></li>
+                <li class="header-menu-list">
+                    <a href="#">회사소개</a>
+                    <ul class="header-inner-menu">
+                        <li><a href="#">웰컴에프앤디 소개</a></li>
+                        <li><a href="#">연혁</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-list">
+                    <a href="#">사업소개</a>
+                    <ul class="header-inner-menu">
+                        <li><a href="#">ICT 서비스</a></li>
+                        <li><a href="#">경영관리</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-list">
+                    <a href="#">홍보센터</a>
+                    <ul class="header-inner-menu">
+                        <li><a href="#">사내 이야기</a></li>
+                        <li><a href="#">뉴스</a></li>
+                        <li><a href="#">실무자 코멘트</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-list">
+                    <a href="#">인재채용</a>
+                    <ul class="header-inner-menu">
+                        <li><a href="#">입사지원</a></li>
+                        <li><a href="#">웰컴복지ㅣ</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <button class="header-hamberger">
@@ -320,6 +345,7 @@
     </div>
 
     <script src="js/coverAnimation.js"></script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>

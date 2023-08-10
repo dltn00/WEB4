@@ -1,0 +1,51 @@
+:root {
+    --common: 10s ease infinite
+}
+
+.cover-animation {
+    animation: sliding-circle var(--common);
+}
+
+.circle-inner-plus {
+    animation: appear-plus var(--common);
+}
+
+@keyframes sliding-circle {
+    0% {
+        width: 20px;
+    }
+
+    10% {
+        width: 88px;
+    }
+
+    100% {
+        width: 88px;
+    }
+}
+
+@keyframes appear-plus {
+    10% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes text1 {}
+
+@keyframes text2 {}
+
+@keyframes text3 {}
+
+@keyframes text4 {}
+
+@keyframes text5 {}

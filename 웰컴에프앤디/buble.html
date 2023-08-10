@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div1 {
+            width: 500px;
+            height: 500px;
+        }
+
+        .div2 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .div3 {
+            width: 150px;
+            height: 150px;
+            transform: translateX(500px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">
+            <div class="div3"></div>
+        </div>
+    </div>
+    <script>
+        const div1 = document.querySelector('.div1');
+        const div3 = document.querySelector('.div3');
+
+
+        document.body.addEventListener('click', () => {
+            console.log('바디클릭');
+        }, true)
+        div1.addEventListener('click', () => {
+            console.log('click div1');
+        }, true)
+        div3.addEventListener('click', () => {
+            console.log('click div3');
+        }, true)
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
