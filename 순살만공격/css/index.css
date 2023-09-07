@@ -453,10 +453,10 @@ footer{
 .footer-line{
     width: 1000px;
     border: 1px solid #fff;
-    display: flex;
-    justify-content: center;
+    margin: 12px auto;
 }
 .footer-p{
+    padding-top: 90px;
     padding-left: 450px;
     color: #fff;
     font-size: 18px;
@@ -475,4 +475,17 @@ footer{
 .footer-text-3{
     display: flex;
     gap: 48px;
+}
+.sns-icon{
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    right: 480px;
+    top: 46px;
+}
+.ft-price-icon{
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    right: 450px;
 }
