@@ -49,11 +49,13 @@ a{
     font-weight: bolder;
     padding-top: 48px;  
 }
-.signature-box>p{
+.main-menu-text{
     font-size: 20px;
     color: #2CA6E0;
     padding-top: 12px;
-    font-weight: bold;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
 }
 .menu-name-box{
     padding-left: 24px;
@@ -82,7 +84,6 @@ a{
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    background-color: #232323;
     position: relative;
     
 }
