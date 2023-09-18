@@ -38,10 +38,9 @@ a{
     height: 100vh;
     overflow: hidden;
 
-    color: #fff;
-    font-size: 40px;
 }
 .mainSection1{
+    
     background-image:  url(../img/136.png);
 }
 .mainSection2{
@@ -159,6 +158,9 @@ a{
     color: #2CA6E0;
     font-size: 18px;
     font-weight: bold;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
 }
 .sub-slide-container{
     width: 100%;
