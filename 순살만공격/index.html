@@ -22,7 +22,16 @@
         </div>
     </header>
     <main>
-        <div><img src="./img/136.png" alt="" class="main-banner"></div>
+        
+        <div class="slidewrap">
+            <div class="slides">
+                <div class="mainSection1 slide"></div>
+                <div class="mainSection2 slide"></div>
+                <div class="mainSection3 slide"></div>
+                <div class="mainSection4 slide"></div>
+                <div class="mainSection5 slide"></div>    
+            </div>
+        </div>
         <section class="menu-signature-container">
             <div class="menu-name-box">
                 <h2>순살만공격메뉴</h2>
@@ -53,47 +62,57 @@
                     </figure> 
                 </div>
                 <div class="side-container">
+
                     <p>추천 사이드</p>
                     <div class="side-line"></div>
                 </div>
                 <div class="side-box">
                     <div class="side-menu">
+                        <img src="./img/치즈볼.jpg" alt="">
                         <p>사이드</p>
                     </div>
                     <div class="side-menu">
+                        <img src="./img/치즈스틳.jpg" alt="">
                         <p>사이드</p>
                     </div>
                     <div class="side-menu">
+                        <img src="./img/포테이토.jpg" alt="">
+                    </div>
+                    <div class="side-menu">
+                        <img src="./img/핫도그.jpg" alt="">
                         <p>사이드</p>
                     </div>
                     <div class="side-menu">
+                        <img src="./img/양념우동사리.jpg" alt="">
                         <p>사이드</p>
                     </div>
                     <div class="side-menu">
-                        <p>사이드</p>
-                    </div>
-                    <div class="side-menu">
+                        <img src="./img/어니언링.jpg" alt="">
                         <p>사이드</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="main-slide-contents">
+        <section class="sub-slide-container">
             <div class="slide-text-list">
                 <p>다른 치킨집들과 차별화된<br>고급스럽고 부드러운 치킨</p>
                 <h2>순살만공격은<br>100% 닭다리살만 사용</h2>
                 <p>튀긴 치킨가 바베큐 치킨을 동시에 맛볼 수 있습니다.</p>
             </div>
 
-            <div class="slide-contents">
-                <div class="slide-cotent"></div>
-                <div class="slide-cotent"></div>
-                <div class="slide-cotent"></div>
-                <div class="slide-cotent"></div>
-            </div>
+            <div class="sub-slidewrap">
+                <div class="sub-slides">
+                    <div class="subSection1 sub-slide"></div>
+                    <div class="subSection2 sub-slide"></div>
+                    <div class="subSection3 sub-slide"></div>
+                    <div class="subSection4 sub-slide"></div>
+                    <div class="subSection5 sub-slide"></div> 
+                    <div class="subSection6 sub-slide"></div>
+                    <div class="subSection7 sub-slide"></div>  
+                </div>
             <button class="view">view</button>
         </section>
-        <section class="serch-container">
+        <section class="serh-container">
             <div class="serch-box">
                 <h2>매장찾기</h2>
                 <p>가까운 순살만공격 매장을 찾아보세요</p>
@@ -114,7 +133,9 @@
                         <div class="map-text"></div>
                         <div class="map-text"></div>
                     </div>
-                    <div class="map-img"></div>
+                    <div class="map-img">
+                        <div id="map" style="height: 600px;"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -190,5 +211,9 @@
             <p>COPYRIGHT Ⓒ SUNSALMAN ATTACK. ALL RIGHTS RESERVED</p>
         </div>
     </footer>
+    <head>
+        <script src="./index.js"></script>
+        <script src="./js/slideWrap.js"></script>
+      </head>
 </body>
 </html>
