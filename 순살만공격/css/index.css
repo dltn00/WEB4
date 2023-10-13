@@ -55,7 +55,9 @@ a{
 .mainSection5{
     background-image: url(../img/161.png);
 }
-
+.main-contents-container{
+    display: flex;
+}
 .menu-signature-container{
     display: flex;
     justify-content: center;
@@ -68,7 +70,7 @@ a{
 }
 .signature-box{
     width: 608px;
-    height: 1100px;
+    height: 946px;
     padding-left: 24px;
     position: relative;
 
@@ -79,6 +81,13 @@ a{
     font-weight: bolder;
     padding-top: 48px;  
 }
+.signature-box>p{
+    font-size: 18px;
+    color: #2CA6E0;
+    font-weight: bolder;
+    padding-top: 16px;
+}
+
 .main-menu-text{
     font-size: 20px;
     color: #2CA6E0;
@@ -86,6 +95,12 @@ a{
     font-weight: bolder;
     display: flex;
     justify-content: center;
+}
+.menu-list>li>a{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 86px;
 }
 .menu-name-box{
     padding-left: 24px;
@@ -114,36 +129,31 @@ a{
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    position: relative;
-    
 }
 .menu-round>p{
     position: absolute;
     font-size: 18px;
     top: 105%;
     left: 41%;
-    color: #2CA6E0;
+    color: #2CA6E0; 
 }
 .side-container{
     position: absolute;
     color: #2CA6E0;
     font-size: 20px;
     font-weight: bold;
-    bottom: 468px;
+    bottom: 364px;
+    border-bottom: 3px solid #2CA6E0;
+    padding-bottom: 10px;
+    padding-right: 470px;
 }
-.side-line{
-    width: 568px;
-    border: 1px solid #2CA6E0;
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
-}
+
 .side-box{
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
     position: absolute;
-    bottom: 120px;
+    bottom: 16px;
 
 }
 .side-menu>img{
@@ -164,17 +174,17 @@ a{
 }
 .sub-slide-container{
     width: 100%;
-    height: 1000px;
+    height: 860px;
     background-color: #1C2077;
-    margin-top: 64px;
+    margin-top: 48px;
 }
-.slide-text-list>p{
+.slide-text-list>li{
     color: #fff;
     font-size: 20px;
-    padding-top: 120px;
+    padding-top: 64px;
     text-align: center;
 }
-.slide-text-list>h2{
+.slide-text-list>li>h2{
     font-size: 32px;
     padding-top: 24px;
     text-align: center;
@@ -192,16 +202,17 @@ a{
     color: rgb(255, 145, 0);
     font-weight: bold;
     margin: 0 auto;
-    margin-top: 68px;
+    margin-top: 48px;
 }
 .sub-slide{
-    gap: 120pxpx;
+    gap: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 400px;
     height: 300px;
     overflow: hidden;
+    margin-top: 24px;
 }
 .sub-slides{
     display: flex;
@@ -352,6 +363,16 @@ a{
     color: #fff;
     font-weight: bold;
     position: absolute;
+    left: 33%;
+    top: 64%;
+    text-align: center;
+}
+.event-app>h2{
+    line-height: 1.5;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
     left: 28%;
     top: 20%;
     text-align: center;
@@ -365,7 +386,7 @@ a{
     padding: 12px;
     border-radius: 34px;
     position: absolute;
-    top: 60%;
+    top: 64%;
     left: 32%;
     font-weight: bold;
 }
@@ -377,6 +398,16 @@ a{
     position: relative;
 }
 .event-check>p{
+    line-height: 1.5;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 33%;
+    top: 64%;
+    text-align: center;
+}
+.event-check>h2{
     line-height: 1.5;
     font-size: 24px;
     color: #fff;
@@ -395,7 +426,7 @@ a{
     padding: 12px;
     border-radius: 34px;
     position: absolute;
-    top: 60%;
+    top: 64%;
     left: 32%;
     font-weight: bold;
 }
@@ -412,7 +443,17 @@ a{
     color: #fff;
     font-weight: bold;
     position: absolute;
-    left: 22%;
+    left: 30%;
+    top: 64%;
+    text-align: center;
+}
+.event-menu>h2{
+    line-height: 1.5;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 25%;
     top: 20%;
     text-align: center;
 }
@@ -425,7 +466,7 @@ a{
     padding: 12px;
     border-radius: 34px;
     position: absolute;
-    top: 60%;
+    top: 64%;
     left: 32%;
     font-weight: bold;
 }
